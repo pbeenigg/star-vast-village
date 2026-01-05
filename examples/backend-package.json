@@ -1,7 +1,7 @@
 {
   "name": "star-vast-village-backend",
   "version": "1.0.0",
-  "description": "星瀚邨社区小程序 - 后端服务",
+  "description": "TOD社区小程序 - 后端服务",
   "author": "PbEeNiG",
   "license": "MIT",
   "main": "dist/server.js",
