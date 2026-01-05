@@ -1,6 +1,63 @@
-# 星瀚邨社区小程序：实践路径与方案
+# 星瀚邨社区小程序
 
-这是一个为“星瀚邨”社区小程序设计的，从启动到长期运营的实践路径与方案，遵循“纯免费、靠捐赠维持”的公益原则。
+> 一个为社区居民打造的数字化服务平台，支持微信小程序、小红书小程序和 H5 网页三端访问
+
+这是一个为"星瀚邨"社区小程序设计的，从启动到长期运营的实践路径与方案，遵循"纯免费、靠捐赠维持"的公益原则。
+
+## 技术栈
+
+- **前端**: Taro 4.x + Taroify + React 19
+- **后端**: Express 5.x + Node.js 22 LTS
+- **数据库**: Supabase (PostgreSQL)
+- **平台支持**: 微信小程序、小红书小程序、H5 网页
+
+## 项目结构
+
+```
+star-vast-village/
+├── frontend/          # 前端项目（Taro 多端应用）
+├── backend/           # 后端项目（Express API 服务）
+├── docs/              # 项目文档
+│   ├── TECH_ARCHITECTURE.md    # 技术架构文档
+│   ├── DATABASE_SCHEMA.md      # 数据库设计文档
+│   ├── DEPLOYMENT.md           # 部署指南
+│   ├── DEVELOPMENT.md          # 开发规范
+│   └── QUICK_START.md          # 快速启动指南
+├── examples/          # 配置文件示例
+└── README.md
+```
+
+## 快速开始
+
+详细的启动指南请查看 [`docs/QUICK_START.md`](docs/QUICK_START.md)
+
+### 前端开发
+
+```bash
+cd frontend
+npm install
+npm run dev:weapp    # 微信小程序
+npm run dev:xhs      # 小红书小程序
+npm run dev:h5       # H5 网页
+```
+
+### 后端开发
+
+```bash
+cd backend
+npm install
+npm run dev          # 启动开发服务器
+```
+
+## 文档导航
+
+- 📖 [技术架构文档](docs/TECH_ARCHITECTURE.md) - 详细的技术选型和架构设计
+- 🗄️ [数据库设计文档](docs/DATABASE_SCHEMA.md) - 完整的数据库表结构设计
+- 🚀 [部署指南](docs/DEPLOYMENT.md) - 生产环境部署步骤
+- 📝 [开发规范](docs/DEVELOPMENT.md) - 代码规范和最佳实践
+- ⚡ [快速启动指南](docs/QUICK_START.md) - 15 分钟快速搭建开发环境
+
+---
 
 ## 一、 核心原则与定位
 
@@ -24,9 +81,7 @@
     4.  **邻里互助/失物招领**：一个简单的BBS板块。
     5.  **捐赠与公示**：设置简单的捐赠入口，并手动更新财务公开页面。
 
-*   **技术选型建议**：
-    *   **前端**：**微信原生小程序**。
-    *   **后端**：**微信云开发 (Tencent CloudBase)**，初期几乎零成本。
+
 
 ### 第二步：功能拓展期 (3-6个月)
 
@@ -38,9 +93,6 @@
     3.  **投票/问卷**：用于社区公共事务的意见征集。
     4.  **智能订阅通知**：利用小程序订阅消息，在关键事件时发送提醒。
 
-*   **技术升级**：
-    *   继续使用微信云开发。
-    *   引入 **GitHub Actions** 进行CI/CD，实现代码自动部署。
 
 ### 第三步：生态建设与长期运营期 (6个月以后)
 
