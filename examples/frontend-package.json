@@ -1,0 +1,63 @@
+{
+  "name": "star-vast-village-miniapp",
+  "version": "1.0.0",
+  "description": "星瀚邨社区小程序 - 前端项目",
+  "author": "PbEeNiG",
+  "license": "MIT",
+  "scripts": {
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:xhs": "npm run build:xhs -- --watch",
+    "build:weapp": "taro build --type weapp",
+    "build:xhs": "taro build --type xhs",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,md}\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "@tarojs/components": "^3.6.20",
+    "@tarojs/helper": "^3.6.20",
+    "@tarojs/plugin-framework-react": "^3.6.20",
+    "@tarojs/plugin-platform-weapp": "^3.6.20",
+    "@tarojs/react": "^3.6.20",
+    "@tarojs/runtime": "^3.6.20",
+    "@tarojs/taro": "^3.6.20",
+    "@taroify/core": "^0.3.0",
+    "@taroify/icons": "^0.3.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.4.7",
+    "dayjs": "^1.11.10",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@tarojs/cli": "^3.6.20",
+    "@tarojs/plugin-html": "^3.6.20",
+    "@types/lodash": "^4.14.202",
+    "@types/react": "^18.2.45",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "babel-preset-taro": "^3.6.20",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.5",
+    "taro-plugin-tailwind": "^3.0.4",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
