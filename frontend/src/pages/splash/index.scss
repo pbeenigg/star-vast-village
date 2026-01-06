@@ -1,0 +1,233 @@
+/* 启动页样式 - 参考 Pixso 设计稿 */
+.splash-page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 背景渐变 */
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #1a1a4e 0%,
+    #2d2d7a 25%,
+    #3d3d9a 50%,
+    #4a4ab0 75%,
+    #2d2d7a 100%
+  );
+  z-index: 0;
+}
+
+/* 背景叠加层 - 增加深度感 */
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(100, 100, 200, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(60, 60, 150, 0.4) 0%, transparent 50%),
+    linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+  z-index: 1;
+}
+
+/* Logo 容器 */
+.logo-container {
+  position: relative;
+  z-index: 10;
+  margin-top: 140px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.logo-text {
+  font-size: 56px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 4px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo-sub {
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 8px;
+}
+
+/* 菱形图片展示区 */
+.diamond-gallery {
+  position: relative;
+  z-index: 10;
+  width: 300px;
+  height: 350px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diamond {
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.diamond-inner {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diamond-emoji {
+  font-size: 40px;
+}
+
+.diamond-top {
+  margin-bottom: -20px;
+}
+
+.diamond-row {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  margin-bottom: -20px;
+}
+
+.diamond-left,
+.diamond-right {
+  opacity: 0.8;
+}
+
+.diamond-bottom {
+  opacity: 0.7;
+}
+
+/* 标语 */
+.slogan {
+  position: relative;
+  z-index: 10;
+  margin-top: 80px;
+}
+
+.slogan-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+/* 开始按钮 */
+.start-btn {
+  position: relative;
+  z-index: 10;
+  margin-top: 40px;
+  padding: 16px 48px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.start-btn-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+/* 版本信息 */
+.version {
+  position: absolute;
+  bottom: 60px;
+  z-index: 10;
+}
+
+.version-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+}
+
+/* 动画效果 */
+@keyframes float {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo-container {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.diamond-gallery {
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.slogan {
+  animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.start-btn {
+  animation: fadeIn 0.8s ease-out 0.9s both;
+}
+
+/* 菱形浮动动画 */
+.diamond-top {
+  animation: float 3s ease-in-out infinite;
+}
+
+.diamond-left {
+  animation: float 3s ease-in-out 0.5s infinite;
+}
+
+.diamond-right {
+  animation: float 3s ease-in-out 1s infinite;
+}
+
+.diamond-bottom {
+  animation: float 3s ease-in-out 1.5s infinite;
+}

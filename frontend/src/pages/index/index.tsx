@@ -31,12 +31,17 @@ export default function Index() {
   }, [isAuthenticated])
 
   const handleEntryClick = (url: string) => {
-    // 检查页面是否已实现
+    // 已实现的页面
     const implementedPages = [
       '/pages/auth/login',
       '/pages/user/index',
       '/pages/user/certification/index',
-      '/pages/user/profile/index'
+      '/pages/user/profile/index',
+      '/pages/announcement/index',
+      '/pages/merchant/index',
+      '/pages/community/index',
+      '/pages/repair/index',
+      '/pages/repair/submit/index'
     ]
     
     if (implementedPages.includes(url)) {

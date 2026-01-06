@@ -2,7 +2,7 @@
   "miniprogramRoot": "dist/",
   "projectname": "star-vast-village",
   "description": "TOD社区小程序",
-  "appid": "touristappid",
+  "appid": "wx771696262193952c",
   "setting": {
     "urlCheck": false,
     "es6": false,
