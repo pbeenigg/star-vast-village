@@ -1,0 +1,246 @@
+.merchant-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+
+// 搜索栏
+.search-bar {
+  padding: 20px 24px;
+  background: #fff;
+
+  .search-input {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 36px;
+    padding: 16px 24px;
+
+    .search-icon {
+      font-size: 28px;
+      margin-right: 12px;
+    }
+
+    input {
+      flex: 1;
+      font-size: 28px;
+      color: #333;
+    }
+  }
+}
+
+// 分类滚动
+.category-scroll {
+  background: #fff;
+  white-space: nowrap;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.category-list {
+  display: inline-flex;
+  padding: 16px 12px;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 24px;
+  margin: 0 8px;
+  border-radius: 12px;
+  transition: all 0.2s;
+
+  &.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+    .category-icon {
+      transform: scale(1.1);
+    }
+
+    .category-label {
+      color: #fff;
+    }
+  }
+
+  .category-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+    transition: transform 0.2s;
+  }
+
+  .category-label {
+    font-size: 24px;
+    color: #666;
+    white-space: nowrap;
+  }
+}
+
+// 商家列表
+.merchant-list {
+  flex: 1;
+  padding: 16px;
+}
+
+.merchant-card {
+  display: flex;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  .merchant-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    background: #f5f5f5;
+  }
+
+  .merchant-info {
+    flex: 1;
+    margin-left: 20px;
+    overflow: hidden;
+
+    .merchant-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      .merchant-name {
+        font-size: 32px;
+        font-weight: 600;
+        color: #333;
+        margin-right: 12px;
+      }
+
+      .verified-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 12px;
+        background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+        border-radius: 6px;
+
+        text {
+          font-size: 20px;
+          color: #fff;
+        }
+      }
+    }
+
+    .merchant-rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      .stars {
+        font-size: 24px;
+        color: #faad14;
+        margin-right: 8px;
+      }
+
+      .rating-text {
+        font-size: 26px;
+        font-weight: 600;
+        color: #faad14;
+        margin-right: 8px;
+      }
+
+      .review-count {
+        font-size: 22px;
+        color: #999;
+      }
+    }
+
+    .merchant-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 8px;
+
+      .category-tag {
+        font-size: 22px;
+        color: #666;
+        background: #f0f0f0;
+        padding: 4px 12px;
+        border-radius: 6px;
+      }
+
+      .business-hours {
+        font-size: 22px;
+        color: #52c41a;
+      }
+    }
+
+    .merchant-address {
+      font-size: 24px;
+      color: #999;
+      margin-bottom: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .merchant-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      .tag {
+        font-size: 20px;
+        color: #667eea;
+        background: rgba(102, 126, 234, 0.1);
+        padding: 4px 12px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .call-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+    border-radius: 50%;
+    margin-left: 16px;
+    align-self: center;
+
+    .call-icon {
+      font-size: 36px;
+    }
+  }
+}
+
+// 空状态
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+
+  .empty-icon {
+    font-size: 120px;
+    margin-bottom: 24px;
+  }
+
+  .empty-text {
+    font-size: 28px;
+    color: #999;
+  }
+}
+
+// 加载更多
+.loading-more,
+.no-more {
+  text-align: center;
+  padding: 24px;
+
+  text {
+    font-size: 24px;
+    color: #999;
+  }
+}
