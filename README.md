@@ -2,7 +2,7 @@
 
 > 基于 Taro + React + Express + Supabase 的多端社区管理平台
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-GPL2.0-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org)
 [![Taro](https://img.shields.io/badge/taro-3.6.20-blue.svg)](https://taro.zone)
 
